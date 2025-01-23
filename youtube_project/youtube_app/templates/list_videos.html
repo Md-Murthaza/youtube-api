@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Video List From Your Page</title>
+</head>
+<body>
+    <h1>Your Videos</h1>
+    <ul>
+        {% for video in videos %}
+            <li>
+                <img src="{{ video.snippet.thumbnails.default.url }}" alt="Thumbnail">
+                <p>{{ video.snippet.title }}</p>
+                <a href="{% url 'edit_video_description' video.id.videoId %}">Edit Description</a>
+       
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

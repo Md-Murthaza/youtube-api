@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Upload Successful</title>
+</head>
+<body>
+    
+
+
+    <h1>Video Uploaded Successfully!</h1>
+    <p>Your video has been uploaded to YouTube.</p>
+    <p><strong>Title:</strong> {{ title }}</p>
+    <p><strong>Description:</strong> {{ description }}</p>
+    <p><strong>Video ID:</strong> {{ video_id }}</p>
+    <p>Watch your video here: <a href="https://www.youtube.com/watch?v={{ video_id }}" target="_blank">Video Link</a></p>
+    <a href="{% url 'youtube_dashboard' %}">Return to Dashboard</a>
+</body>
+</html>
